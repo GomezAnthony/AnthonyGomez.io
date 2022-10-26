@@ -30,8 +30,8 @@ const Navbar = () => {
             )}
           </div>
         </div>
-        <div className={isOpen ? "h-screen fixed left-1/4 w-96 bg-tertiary-color ease-in-out duration-500" : " fixed left-[100%] ease-out duration-500"}>
-          <div className="h-96">
+        <div className={isOpen ? "h-screen fixed left-20 w-[100%] bg-tertiary-color ease-in-out duration-500" : " fixed left-[100%] ease-out duration-500"}>
+          <div className="h-96 w-[80%]">
             <div className="flex flex-col items-center justify-evenly h-full">
               <Link className="text-2xl uppercase text-primary-color" to="/">
                 Home
