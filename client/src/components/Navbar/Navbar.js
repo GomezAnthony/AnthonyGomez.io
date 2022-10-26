@@ -1,16 +1,54 @@
-import React from 'react'
-
+import React, { useState } from "react";
+import logo from "../../assets/animoji-logo.png";
+import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
+import Button from "../Buttons/Button";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openNavClick = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div>
-        <div className='navbar'>
-            <div className='navbar__container'>
-                <div className='navbar__logo'></div>
-            </div>
+      <div>
+        <div className="flex items-center justify-between px-5">
+          <div>
+            <img className="h-32" src={logo} alt="Animoji Logo" />
+          </div>
+          <div onClick={openNavClick} className="flex">
+            {!isOpen ? (
+              <FaBars
+                className="text-3xl text-secondary-color cursor-pointer"
+              />
+            ) : (
+              <FaTimes
+                className="text-3xl text-secondary-color cursor-pointer"
+              />
+            )}
+          </div>
         </div>
+        <div className={isOpen ? "h-screen fixed left-1/4 w-96 bg-tertiary-color ease-in-out duration-500" : " fixed left-[100%] ease-out duration-500"}>
+          <div className="h-96">
+            <div className="flex flex-col items-center justify-evenly h-full">
+              <Link className="text-2xl uppercase text-primary-color" to="/">
+                Home
+              </Link>
+              <Link className="text-2xl uppercase text-primary-color" to="/">
+                Current projects
+              </Link>
+              <Link className="text-2xl uppercase text-primary-color" to="/">
+                Twitch
+              </Link>
+              <Button label="Resume" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
