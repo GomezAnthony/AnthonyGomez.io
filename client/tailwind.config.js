@@ -12,6 +12,7 @@ module.exports = {
         'primary-color': '#1A3566',
         'secondary-color': '#5F7AB0',
         'tertiary-color': '#8CA0C4',
+        'complementary-color': '#FFD45E'
       }
     },
   },

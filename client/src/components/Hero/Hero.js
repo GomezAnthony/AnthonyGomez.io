@@ -4,14 +4,13 @@ import { MdWavingHand } from "react-icons/md";
 function Hero() {
   return (
     <div>
-        <div className='hero'>
-            <div className=''>
-                <div className='flex'>
+        <div>
+            <div className='container mx-auto w-[80%] py-20'>
+                <div className='flex py-4'>
                     <h2 className='text-white text-2xl'>Hi,</h2><MdWavingHand className='text-[#FFD45E] text-2xl' />
                 </div>
-                <div className=''>
-                    <h1 className="font-bold text-5xl text-secondary-color before:content-['I'm '] before:text-[#FFD45E] before:absolute before:z-[-1] before:top-2">I'm Anthony, your next Software Engineer!</h1>
-        
+                <div>
+                    <h1 className="font-bold text-5xl text-tertiary-color tracking-wider leading-[3.5rem]">I'm <span className='text-complementary-color'>Anthony</span>, your next <span className='text-complementary-color'>Software Engineer!</span></h1>
                 </div>
             </div>
         </div>
