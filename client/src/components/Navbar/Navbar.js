@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <div>
       <div>
-        <div className="flex items-center justify-between w-[90%] m-auto bg-slate-500 px-5">
+        <div className="flex items-center justify-between w-[90%] m-auto px-5">
           <div>
             <img className="h-32" src={logo} alt="Animoji Logo" />
           </div>
@@ -29,12 +29,12 @@ const Navbar = () => {
         <div
           className={
             isOpen
-              ? "h-screen fixed left-20 w-[100%] bg-black ease-in-out duration-500"
+              ? "h-screen fixed left-14 w-[100%] bg-black ease-in-out duration-500 z-10"
               : " fixed left-[100%] ease-out duration-500"
           }
         >
           <div className="h-96">
-            <div className="flex flex-col items-center justify-between my-32  h-full">
+            <div className="flex flex-col items-center justify-between my-32 h-full">
               <Link className="text-2xl uppercase text-white font-regular" to="/">
                 Home
               </Link>
