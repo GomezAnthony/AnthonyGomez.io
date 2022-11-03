@@ -39,10 +39,10 @@ const Navbar = () => {
                 Home
               </Link>
               <Link className="text-2xl uppercase text-white font-regular" to="/">
-                Current projects
+                Work
               </Link>
               <Link className="text-2xl uppercase text-white font-regular" to="/">
-                Twitch
+                Skills
               </Link>
               <Button label="Resume" />
             </div>
