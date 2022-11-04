@@ -1,25 +1,22 @@
-import {React, useEffect} from 'react'
-import { Octokit } from "octokit";
+import {React, useEffect, useState} from 'react'
+import octokit from '../../utils/octokit'
 
 
 const Work = () => {
 
-const octokit = new Octokit({ 
-  auth: ""
-});
-
-useEffect(() => {
-    getRepo()
-}, [])
-
-async function getRepo() {
-    const result = await octokit.request('GET /users/gomezanthony/repos', {
+  const [repo, setRepo] = useState('')
+  async function getRepos() {
+    await octokit.request('GET /users/GomezAnthony/repos', {
         username: 'GomezAnthony'
-    });
-    console.log(result.data)
-}
+    }).then(res => setRepo(res.data)) 
 
+  }
 
+  useEffect(() => {
+    getRepos()
+  }, [])
+
+  console.log(repo)
   return (
     <div>
         
