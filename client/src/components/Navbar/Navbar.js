@@ -14,11 +14,24 @@ const Navbar = () => {
   return (
     <div>
       <div>
-        <div className="flex items-center justify-between w-[90%] m-auto px-5">
+        <div className="flex items-center justify-between w-[90%] m-auto">
           <div>
-            <img className="h-32" src={logo} alt="Animoji Logo" />
+            <img className="h-28" src={logo} alt="Animoji Logo" />
           </div>
-          <div onClick={openNavClick} className="flex">
+        {/* Display hidden on small devices and anything that is 700px and above, dsiplay flex */}
+          <div className="hidden md:flex md:justify-evenly md:items-center  ">
+              <Link className="text-lg p-4 uppercase text-black font-regular" to="/">
+                Home
+              </Link>
+              <Link className="text-lg p-4 uppercase text-black font-regular" to="/">
+                Work
+              </Link>
+              <Link className="text-lg p-4 uppercase text-black font-regular" to="/">
+                Skills
+              </Link>
+              <Button label="Resume" />
+            </div>
+          <div onClick={openNavClick} className="block md:hidden">
             {!isOpen ? (
               <FaBars className="text-3xl text-black cursor-pointer" />
             ) : (

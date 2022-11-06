@@ -6,7 +6,7 @@ import { FiArrowDown } from "react-icons/fi";
 const Links = () => {
   return (
     <div>
-      <div className='flex justify-around container mx-auto w-[80%] max-w-xl mb-48 animte'>
+      <div className='flex justify-around container mx-auto w-[80%] max-w-xl mb-60 animte'>
         <a href='https://github.com/GomezAnthony' target='_blank'rel="noopener noreferrer" ><FaGithub className='text-secondary-color text-4xl md:text-5xl cursor-pointer hover:scale-125 duration-500 ease-in-out transition delay-75' /></a>
         <a href='https://www.linkedin.com/in/anthony-gomez-20b291130/' rel="noopener noreferrer"><FaLinkedin className='text-secondary-color text-4xl md:text-5xl cursor-pointer hover:scale-125 duration-500 ease-in-out transition delay-75' /></a>
         <a href='https://twitter.com/tonyxcodes' target='_blank' rel="noopener noreferrer"><FaTwitter className='text-secondary-color text-4xl md:text-5xl cursor-pointer hover:scale-125 duration-500 ease-in-out transition delay-75' /></a>
